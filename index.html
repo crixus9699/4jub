@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title id="pageTitle">ডা. তারেকুল ইসলাম | মডার্ন সার্জারি স্পেশালিস্ট</title>
+    <title id="pageTitle">ডা. তারেকুল ইসলাম | আধুনিক সার্জারি বিশেষজ্ঞ</title>
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -46,7 +46,6 @@
             overflow-x: hidden;
         }
         
-        /* প্রিমিয়াম কার্ড স্টাইল */
         .card {
             background: white;
             border-radius: 1.5rem;
@@ -60,7 +59,6 @@
             border-color: rgba(14, 165, 233, 0.3);
         }
         
-        /* গ্লাস কার্ড */
         .glass-card {
             background: rgba(255, 255, 255, 0.85);
             backdrop-filter: blur(10px);
@@ -68,7 +66,6 @@
             border: 1px solid rgba(14, 165, 233, 0.2);
         }
         
-        /* প্রাইমারি বাটন */
         .btn-primary {
             background: linear-gradient(105deg, #0EA5E9 0%, #38BDF8 100%);
             transition: all 0.3s;
@@ -79,7 +76,6 @@
             box-shadow: 0 8px 20px rgba(14, 165, 233, 0.35);
         }
         
-        /* আউটলাইন বাটন */
         .btn-outline {
             border: 1.5px solid #0EA5E9;
             color: #0EA5E9;
@@ -90,24 +86,20 @@
             color: white;
         }
         
-        /* নেভিগেশন */
         .sticky-nav {
             backdrop-filter: blur(12px);
             background: rgba(255, 255, 255, 0.92);
             border-bottom: 1px solid #E2E8F0;
         }
         
-        /* হিরো প্যাটার্ন */
         .hero-pattern {
             background-image: radial-gradient(circle at 20% 30%, rgba(14,165,233,0.04) 0%, transparent 60%);
         }
         
-        /* স্ক্রলবার */
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #E2E8F0; border-radius: 10px; }
         ::-webkit-scrollbar-thumb { background: #0EA5E9; border-radius: 10px; }
         
-        /* লোডার */
         .loader {
             border: 3px solid #E2E8F0;
             border-top: 3px solid #0EA5E9;
@@ -118,14 +110,13 @@
         }
         @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
         
-        /* ফর্ম স্টাইল */
         input, select, textarea {
             transition: all 0.2s;
         }
         input:focus, select:focus, textarea:focus {
             border-color: #0EA5E9;
-            ring: 2px solid #0EA5E9;
             outline: none;
+            ring: 2px solid #0EA5E9;
         }
     </style>
 </head>
@@ -181,14 +172,14 @@
                             <i class="fas fa-heartbeat mr-1"></i> TakeCare™
                         </div>
                         <h1 class="text-4xl md:text-5xl font-bold text-gray-800 leading-tight mb-4">
-                            Be Attentive To Your <span class="text-primary">Health</span>
+                            আপনার স্বাস্থ্যের প্রতি <span class="text-primary">সচেতন থাকুন</span>
                         </h1>
                         <p id="heroQuote" class="text-gray-500 text-lg leading-relaxed mb-6">
-                            As a medical doctor, I have known the face of adversity. I have seen much of death and dying, 
-                            suffering and sorrow. I just want you to work out, eat healthy, be patient. Believe me your body will reward you.
+                            একজন চিকিৎসক হিসেবে আমি প্রতিকূলতার মুখ দেখেছি। মৃত্যু, যন্ত্রণা, কষ্ট — অনেক কিছু দেখেছি। 
+                            আমি শুধু চাই আপনি সঠিক জীবনযাপন করুন, স্বাস্থ্যকর খাবার খান, ধৈর্য ধরুন। বিশ্বাস রাখুন, আপনার শরীর আপনাকে পুরস্কৃত করবে।
                         </p>
                         <a href="#appointment" class="btn-primary text-white px-8 py-3 rounded-full inline-flex items-center gap-2 font-medium">
-                            <i class="fas fa-calendar-check"></i> Make Appointment
+                            <i class="fas fa-calendar-check"></i> অ্যাপয়েন্টমেন্ট করুন
                         </a>
                     </div>
                     <div data-aos="fade-left" class="flex justify-center">
@@ -201,7 +192,7 @@
             </div>
         </section>
 
-        <!-- ডাক্তার প্রোফাইল ও শিক্ষা (দুই কলাম) -->
+        <!-- ডাক্তার প্রোফাইল ও শিক্ষা -->
         <section id="doctor" class="py-16 bg-white">
             <div class="container mx-auto px-6">
                 <div class="grid md:grid-cols-2 gap-10">
@@ -213,25 +204,23 @@
                             </div>
                             <div>
                                 <h2 id="doctorName" class="text-2xl font-bold text-gray-800">ডা. তারেকুল ইসলাম</h2>
-                                <p id="doctorSpecialty" class="text-primary font-medium">General Surgery</p>
+                                <p id="doctorSpecialty" class="text-primary font-medium">জেনারেল সার্জারি</p>
                             </div>
                         </div>
                         <p id="doctorBio" class="text-gray-600 leading-relaxed mb-4">
-                            Dr. Tariqul Islam graduated from Rajshahi Medical College under the supervision of a professor in 2011. 
-                            During internship period in surgical research college hospital, his special interest was in surgery. 
-                            He has completed part 1 & 2 fellowship exams in surgery specialty from the Institute of Bangladesh 
-                            College of Physicians and Surgeons, Dhaka in 2014.
+                            ডা. তারেকুল ইসলাম ২০১১ সালে রাজশাহী মেডিকেল কলেজ থেকে স্নাতক সম্পন্ন করেন। ইন্টার্নশিপ চলাকালীন তিনি সার্জারি বিভাগে বিশেষ আগ্রহী হন। 
+                            ২০১৪ সালে বাংলাদেশ কলেজ অব ফিজিশিয়ানস অ্যান্ড সার্জনস, ঢাকা থেকে সার্জারি বিশেষত্বের ফেলোশিপ পরীক্ষার প্রথম ও দ্বিতীয় অংশ সম্পন্ন করেন।
                         </p>
                         <div class="flex gap-3 mt-4">
-                            <span class="px-3 py-1 bg-gray-100 rounded-full text-sm text-gray-600"><i class="fas fa-certificate text-primary mr-1"></i> MBBS</span>
-                            <span class="px-3 py-1 bg-gray-100 rounded-full text-sm text-gray-600"><i class="fas fa-certificate text-primary mr-1"></i> FCPS</span>
+                            <span class="px-3 py-1 bg-gray-100 rounded-full text-sm text-gray-600"><i class="fas fa-certificate text-primary mr-1"></i> এমবিবিএস</span>
+                            <span class="px-3 py-1 bg-gray-100 rounded-full text-sm text-gray-600"><i class="fas fa-certificate text-primary mr-1"></i> এফসিপিএস</span>
                         </div>
                     </div>
                     
-                    <!-- শিক্ষা ও গবেষণা কার্ড -->
+                    <!-- শিক্ষা ও গবেষণা -->
                     <div class="card p-6 md:p-8" data-aos="fade-left">
                         <h3 class="text-xl font-bold text-gray-800 mb-5 flex items-center gap-2">
-                            <i class="fas fa-graduation-cap text-primary"></i> Education & Research
+                            <i class="fas fa-graduation-cap text-primary"></i> শিক্ষা ও গবেষণা
                         </h3>
                         <ul id="educationList" class="space-y-4"></ul>
                     </div>
@@ -239,7 +228,7 @@
             </div>
         </section>
 
-        <!-- স্ট্যাটস সেকশন -->
+        <!-- স্ট্যাটস -->
         <section class="py-12 bg-accent/30">
             <div class="container mx-auto px-6">
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -251,11 +240,11 @@
             </div>
         </section>
 
-        <!-- অ্যাপয়েন্টমেন্ট ফর্ম + কন্টাক্ট (হোয়াটসঅ্যাপ) -->
+        <!-- অ্যাপয়েন্টমেন্ট ফর্ম (তারিখ ও সময় বাদ) -->
         <section id="appointment" class="py-16">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12" data-aos="fade-up">
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-3">Book an <span class="text-primary">Appointment</span></h2>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-3">অ্যাপয়েন্টমেন্ট <span class="text-primary">বুক করুন</span></h2>
                     <div class="w-20 h-1 bg-primary mx-auto rounded-full"></div>
                 </div>
                 <div class="grid md:grid-cols-2 gap-10">
@@ -263,46 +252,42 @@
                     <div class="card p-6 md:p-8" data-aos="fade-right">
                         <form id="appointmentForm" class="space-y-5">
                             <div class="grid md:grid-cols-2 gap-4">
-                                <input type="text" id="patientName" placeholder="Full Name" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary">
-                                <input type="number" id="patientAge" placeholder="Age" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary">
+                                <input type="text" id="patientName" placeholder="আপনার নাম" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary">
+                                <input type="number" id="patientAge" placeholder="বয়স" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary">
                             </div>
                             <div class="grid md:grid-cols-2 gap-4">
                                 <select id="patientGender" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary">
-                                    <option value="">Gender</option>
-                                    <option>Male</option>
-                                    <option>Female</option>
-                                    <option>Other</option>
+                                    <option value="">লিঙ্গ</option>
+                                    <option>পুরুষ</option>
+                                    <option>মহিলা</option>
+                                    <option>অন্যান্য</option>
                                 </select>
                                 <select id="patientSpecialty" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary">
-                                    <option value="">Specialty</option>
-                                    <option>General Surgery</option>
-                                    <option>Cardiology</option>
-                                    <option>Orthopedics</option>
+                                    <option value="">বিশেষজ্ঞতা</option>
+                                    <option>জেনারেল সার্জারি</option>
+                                    <option>কার্ডিওলজি</option>
+                                    <option>অর্থোপেডিকস</option>
                                 </select>
                             </div>
-                            <div class="grid md:grid-cols-2 gap-4">
-                                <input type="date" id="appointmentDate" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary">
-                                <input type="time" id="appointmentTime" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary">
-                            </div>
-                            <input type="tel" id="patientPhone" placeholder="WhatsApp Number" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary">
-                            <textarea id="patientProblem" rows="3" placeholder="Brief description of your problem" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary"></textarea>
+                            <input type="tel" id="patientPhone" placeholder="হোয়াটসঅ্যাপ নম্বর" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary">
+                            <textarea id="patientProblem" rows="3" placeholder="আপনার সমস্যার সংক্ষিপ্ত বিবরণ" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary"></textarea>
                             <button type="submit" class="btn-primary text-white px-6 py-3 rounded-xl font-semibold w-full flex items-center justify-center gap-2">
-                                <i class="fab fa-whatsapp text-lg"></i> Book via WhatsApp
+                                <i class="fab fa-whatsapp text-lg"></i> হোয়াটসঅ্যাপে বুক করুন
                             </button>
                         </form>
                         <div id="formMessage" class="hidden mt-4 p-3 rounded-xl text-center text-green-700 bg-green-50"></div>
                     </div>
                     
-                    <!-- যোগাযোগ তথ্য ও টাইমিং -->
+                    <!-- যোগাযোগ তথ্য -->
                     <div class="card p-6 md:p-8" data-aos="fade-left">
-                        <h3 class="text-xl font-bold text-gray-800 mb-5">Contact & Timing</h3>
+                        <h3 class="text-xl font-bold text-gray-800 mb-5">যোগাযোগ ও সময়সূচি</h3>
                         <div class="space-y-4">
-                            <div class="flex items-center gap-3"><i class="fab fa-whatsapp text-primary text-xl w-6"></i><p id="contactWhatsapp" class="text-gray-600">+8801712345678</p></div>
-                            <div class="flex items-center gap-3"><i class="fas fa-phone-alt text-primary text-xl w-6"></i><p id="contactPhone" class="text-gray-600">+8801712345678</p></div>
+                            <div class="flex items-center gap-3"><i class="fab fa-whatsapp text-primary text-xl w-6"></i><p id="contactWhatsapp" class="text-gray-600">+৮৮০১৭১২৩৪৫৬৭৮</p></div>
+                            <div class="flex items-center gap-3"><i class="fas fa-phone-alt text-primary text-xl w-6"></i><p id="contactPhone" class="text-gray-600">+৮৮০১৭১২৩৪৫৬৭৮</p></div>
                             <div class="flex items-center gap-3"><i class="fas fa-envelope text-primary text-xl w-6"></i><p id="contactEmail" class="text-gray-600">dr.tariqul@takecare.com</p></div>
-                            <div class="flex items-center gap-3"><i class="fas fa-map-marker-alt text-primary text-xl w-6"></i><p id="clinicAddress" class="text-gray-600">23/B, Panthapath, Dhaka-1205</p></div>
+                            <div class="flex items-center gap-3"><i class="fas fa-map-marker-alt text-primary text-xl w-6"></i><p id="clinicAddress" class="text-gray-600">২৩/বি, প্যান্থপথ, ঢাকা-১২০৫</p></div>
                             <div class="pt-3 border-t border-gray-100">
-                                <p class="font-semibold mb-2">চেম্বার সময়:</p>
+                                <p class="font-semibold mb-2">চেম্বারের সময়:</p>
                                 <p id="clinicHours" class="text-gray-500 text-sm">সোম-শুক্র: সন্ধ্যা ৬টা - ৯টা<br>শনিবার: সকাল ১০টা - দুপুর ১টা</p>
                             </div>
                         </div>
@@ -311,25 +296,25 @@
             </div>
         </section>
 
-        <!-- রিভিউ সেকশন -->
+        <!-- রিভিউ -->
         <section id="reviews" class="py-16 bg-gray-50/50">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12" data-aos="fade-up">
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-3">Patient <span class="text-primary">Reviews</span></h2>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-3">রোগীর <span class="text-primary">মতামত</span></h2>
                     <div class="w-20 h-1 bg-primary mx-auto rounded-full"></div>
                 </div>
                 <div id="reviewsGrid" class="grid md:grid-cols-3 gap-8"></div>
             </div>
         </section>
 
-        <!-- নিউজলেটার / আপডেট -->
+        <!-- নিউজলেটার -->
         <section class="py-16 bg-primary/5">
             <div class="container mx-auto px-6 text-center">
                 <div class="max-w-2xl mx-auto" data-aos="fade-up">
                     <i class="fas fa-bell text-primary text-4xl mb-4"></i>
-                    <h3 class="text-2xl font-bold text-gray-800 mb-2">Never miss an update or an exciting offer</h3>
-                    <p class="text-gray-500 mb-6">We do not send emails about new products or promotions. You can always follow us on social media for updates.</p>
-                    <a href="#contact" class="btn-primary text-white px-8 py-3 rounded-full inline-flex items-center gap-2">Get Started Now <i class="fas fa-arrow-right"></i></a>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2">কোনও আপডেট মিস করবেন না</h3>
+                    <p class="text-gray-500 mb-6">আমরা নতুন পণ্য বা প্রোমোশনের ইমেইল পাঠাই না। আপডেট পেতে সোশ্যাল মিডিয়ায় ফলো করতে পারেন।</p>
+                    <a href="#contact" class="btn-primary text-white px-8 py-3 rounded-full inline-flex items-center gap-2">শুরু করুন <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </section>
@@ -341,44 +326,44 @@
                     <a href="#" class="w-9 h-9 bg-gray-100 rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-white transition"><i class="fab fa-twitter"></i></a>
                     <a href="#" class="w-9 h-9 bg-gray-100 rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-white transition"><i class="fab fa-instagram"></i></a>
                 </div>
-                <p id="footerText" class="text-gray-400 text-sm">© 2025 TakeCare™ - All rights reserved</p>
+                <p id="footerText" class="text-gray-400 text-sm">© ২০২৫ TakeCare™ - সর্বস্বত্ব সংরক্ষিত</p>
             </div>
         </footer>
     </main>
 
     <script>
         // ========== কনফিগারেশন ==========
-        const DOCTOR_WHATSAPP = "8801712345678";  // আপনার হোয়াটসঅ্যাপ নম্বর দিন
-        const GOOGLE_SHEETS_URL = "";  // আপনার গুগল শীট CSV লিংক দিন
-        
-        // ডিফল্ট ডেটা
+        const DOCTOR_WHATSAPP = "8801712345678";  // আপনার হোয়াটসঅ্যাপ নম্বর দিন (কান্ট্রি কোড ছাড়া 880 দিয়ে)
+        const GOOGLE_SHEETS_URL = "";  // আপনার গুগল শীট CSV লিংক দিন (ঐচ্ছিক)
+
+        // ডিফল্ট ডেটা (বাংলায়)
         const DEFAULT_DATA = {
             doctorName: "ডা. তারেকুল ইসলাম",
-            doctorSpecialty: "General Surgery",
-            doctorBio: "Dr. Tariqul Islam graduated from Rajshahi Medical College under the supervision of a professor in 2011. During internship period in surgical research college hospital, his special interest was in surgery. He has completed part 1 & 2 fellowship exams in surgery specialty from the Institute of Bangladesh College of Physicians and Surgeons, Dhaka in 2014.",
+            doctorSpecialty: "জেনারেল সার্জারি",
+            doctorBio: "ডা. তারেকুল ইসলাম ২০১১ সালে রাজশাহী মেডিকেল কলেজ থেকে স্নাতক সম্পন্ন করেন। ইন্টার্নশিপ চলাকালীন তিনি সার্জারি বিভাগে বিশেষ আগ্রহী হন। ২০১৪ সালে বাংলাদেশ কলেজ অব ফিজিশিয়ানস অ্যান্ড সার্জনস, ঢাকা থেকে সার্জারি বিশেষত্বের ফেলোশিপ পরীক্ষার প্রথম ও দ্বিতীয় অংশ সম্পন্ন করেন।",
             doctorImage: "https://randomuser.me/api/portraits/men/45.jpg",
-            heroQuote: "As a medical doctor, I have known the face of adversity. I have seen much of death and dying, suffering and sorrow. I just want you to work out, eat healthy, be patient. Believe me your body will reward you.",
+            heroQuote: "একজন চিকিৎসক হিসেবে আমি প্রতিকূলতার মুখ দেখেছি। মৃত্যু, যন্ত্রণা, কষ্ট — অনেক কিছু দেখেছি। আমি শুধু চাই আপনি সঠিক জীবনযাপন করুন, স্বাস্থ্যকর খাবার খান, ধৈর্য ধরুন। বিশ্বাস রাখুন, আপনার শরীর আপনাকে পুরস্কৃত করবে।",
             statYears: "১৫+",
             statPatients: "৫কে+",
             statSatisfaction: "৯৭%",
             clinicAddress: "২৩/বি, প্যান্থপথ, ঢাকা-১২০৫",
-            phone: "+৮৮ ০১৭১২-৩৪৫৬৭৮",
-            whatsapp: "+৮৮ ০১৭১২-৩৪৫৬৭৮",
+            phone: "+৮৮০১৭১২৩৪৫৬৭৮",
+            whatsapp: "+৮৮০১৭১২৩৪৫৬৭৮",
             email: "dr.tariqul@takecare.com",
             clinicHours: "সোম-শুক্র: সন্ধ্যা ৬টা - ৯টা<br>শনিবার: সকাল ১০টা - দুপুর ১টা",
             footer: "© ২০২৫ TakeCare™ - সর্বস্বত্ব সংরক্ষিত",
             education: [
-                "Fellow of College of Physicians and Surgeons (Part I)",
-                "Training on Anesthesia and Pain Management",
-                "Training on General Surgery"
+                "কলেজ অব ফিজিশিয়ানস অ্যান্ড সার্জনসের ফেলো (প্রথম পর্ব)",
+                "অ্যানেস্থেসিয়া ও ব্যথা ব্যবস্থাপনায় প্রশিক্ষণ",
+                "জেনারেল সার্জারিতে প্রশিক্ষণ"
             ],
             reviews: [
-                { name: "Rakib Hossain", text: "Excellent doctor. Very professional and caring.", rating: 5, date: "2024" },
-                { name: "Fatema Begum", text: "Successfully treated my father. Highly recommended.", rating: 5, date: "2024" },
-                { name: "Shahin Alam", text: "Good environment and timely service.", rating: 4.5, date: "2023" }
+                { name: "রাকিব হোসেন", text: "দক্ষ ও পেশাদার ডাক্তার। অত্যন্ত যত্নশীল।", rating: 5, date: "২০২৪" },
+                { name: "ফাতেমা বেগম", text: "আমার বাবার সফল চিকিৎসা করেছেন। স্যারকে অসংখ্য ধন্যবাদ।", rating: 5, date: "২০২৪" },
+                { name: "শাহিন আলম", text: "পরিষ্কার-পরিচ্ছন্ন পরিবেশ, সময়মত সেবা।", rating: 4.5, date: "২০২৩" }
             ]
         };
-        
+
         // CSV পার্সার
         function parseCSV(csvText) {
             const rows = [];
@@ -399,7 +384,7 @@
             }
             return rows;
         }
-        
+
         async function loadFromSheets() {
             if(!GOOGLE_SHEETS_URL) return DEFAULT_DATA;
             try {
@@ -438,9 +423,9 @@
                 };
             } catch(e) { console.error(e); return DEFAULT_DATA; }
         }
-        
+
         function updateUI(data) {
-            document.title = `${data.doctorName} | সার্জারি স্পেশালিস্ট`;
+            document.title = `${data.doctorName} | আধুনিক সার্জারি বিশেষজ্ঞ`;
             document.getElementById('doctorName').innerText = data.doctorName;
             document.getElementById('doctorSpecialty').innerText = data.doctorSpecialty;
             document.getElementById('doctorBio').innerText = data.doctorBio;
@@ -469,7 +454,7 @@
             `).join('');
             AOS.refresh();
         }
-        
+
         function initWhatsApp() {
             const form = document.getElementById('appointmentForm');
             form.addEventListener('submit', (e) => {
@@ -478,24 +463,24 @@
                 const age = document.getElementById('patientAge').value.trim();
                 const gender = document.getElementById('patientGender').value;
                 const specialty = document.getElementById('patientSpecialty').value;
-                const date = document.getElementById('appointmentDate').value;
-                const time = document.getElementById('appointmentTime').value;
                 const phone = document.getElementById('patientPhone').value.trim();
                 const problem = document.getElementById('patientProblem').value.trim();
-                if(!name || !age || !gender || !specialty || !date || !time || !phone) {
-                    alert('Please fill all required fields');
+                
+                if(!name || !age || !gender || !specialty || !phone) {
+                    alert('দয়া করে সব তথ্য পূরণ করুন');
                     return;
                 }
-                const msg = `🆕 *New Appointment Request*%0A👤 Name: ${name}%0A🎂 Age: ${age}%0A⚥ Gender: ${gender}%0A🩺 Specialty: ${specialty}%0A📅 Date: ${date}%0A⏰ Time: ${time}%0A📞 Phone: ${phone}%0A📝 Problem: ${problem || 'Not specified'}`;
+                
+                const msg = `🆕 *নতুন অ্যাপয়েন্টমেন্ট*%0A👤 নাম: ${name}%0A🎂 বয়স: ${age}%0A⚥ লিঙ্গ: ${gender}%0A🩺 বিশেষজ্ঞতা: ${specialty}%0A📞 ফোন: ${phone}%0A📝 সমস্যা: ${problem || 'উল্লেখ নেই'}`;
                 window.open(`https://wa.me/${DOCTOR_WHATSAPP}?text=${msg}`, '_blank');
                 const msgDiv = document.getElementById('formMessage');
-                msgDiv.innerHTML = '✅ Appointment request sent! We will contact you shortly.';
+                msgDiv.innerHTML = '✅ আপনার অ্যাপয়েন্টমেন্টের অনুরোধ পাঠানো হয়েছে! আমরা শীঘ্রই যোগাযোগ করব।';
                 msgDiv.classList.remove('hidden');
                 form.reset();
-                setTimeout(() => msgDiv.classList.add('hidden'), 4000);
+                setTimeout(() => msgDiv.classList.add('hidden'), 5000);
             });
         }
-        
+
         function initMobileMenu() {
             const btn = document.getElementById('mobileMenuBtn');
             const menu = document.getElementById('mobileMenu');
@@ -507,7 +492,7 @@
             });
             menu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => { menu.classList.add('hidden'); icon.classList.add('fa-bars'); icon.classList.remove('fa-times'); }));
         }
-        
+
         async function init() {
             const data = await loadFromSheets();
             updateUI(data);
