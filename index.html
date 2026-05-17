@@ -1,32 +1,512 @@
-Field	Value
-firstname	ডা. তারেকুল
-lastname	ইসলাম
-specialty	জেনারেল সার্জারি
-bio	ডা. তারেকুল ইসলাম ২০১১ সালে রাজশাহী মেডিকেল কলেজ থেকে স্নাতক সম্পন্ন করেন। ইন্টার্নশিপ চলাকালীন তিনি সার্জারি বিভাগে বিশেষ আগ্রহী হন। ২০১৪ সালে বাংলাদেশ কলেজ অব ফিজিশিয়ানস অ্যান্ড সার্জনস, ঢাকা থেকে সার্জারি বিশেষত্বের ফেলোশিপ পরীক্ষার প্রথম ও দ্বিতীয় অংশ সম্পন্ন করেন।
-heroquote	একজন চিকিৎসক হিসেবে আমি প্রতিকূলতার মুখ দেখেছি। মৃত্যু, যন্ত্রণা, কষ্ট — অনেক কিছু দেখেছি। আমি শুধু চাই আপনি সঠিক জীবনযাপন করুন, স্বাস্থ্যকর খাবার খান, ধৈর্য ধরুন। বিশ্বাস রাখুন, আপনার শরীর আপনাকে পুরস্কৃত করবে।
-image	https://randomuser.me/api/portraits/men/45.jpg
-statyears	১৫+
-statpatients	৫কে+
-statsatisfaction	৯৭%
-clinicaddress	২৩/বি, প্যান্থপথ, ঢাকা-১২০৫
-phone	+৮৮০১৭১২৩৪৫৬৭৮
-whatsapp	+৮৮০১৭১২৩৪৫৬৭৮
-email	dr.tariqul@takecare.com
-clinichours	সোম-শুক্র: সন্ধ্যা ৬টা - ৯টা\nশনিবার: সকাল ১০টা - দুপুর ১টা
-footer	© ২০২৫ TakeCare™ - সর্বস্বত্ব সংরক্ষিত
-mapurl	https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3652.324563562395!2d90.3926532748357!3d23.74718408925106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8bd552c2b3b%3A0x4e8f1c4e4f5c6d7e!2sDhaka%20Medical%20College%20Hospital!5e0!3m2!1sen!2sbd!4v1700000000000!5m2!1sen!2sbd
-education1	কলেজ অব ফিজিশিয়ানস অ্যান্ড সার্জনসের ফেলো (প্রথম পর্ব)
-education2	অ্যানেস্থেসিয়া ও ব্যথা ব্যবস্থাপনায় প্রশিক্ষণ
-education3	জেনারেল সার্জারিতে প্রশিক্ষণ
-review1_name	রাকিব হোসেন
-review1_text	দক্ষ ও পেশাদার ডাক্তার। অত্যন্ত যত্নশীল।
-review1_rating	5
-review1_date	২০২৪
-review2_name	ফাতেমা বেগম
-review2_text	আমার বাবার সফল চিকিৎসা করেছেন। স্যারকে অসংখ্য ধন্যবাদ।
-review2_rating	5
-review2_date	২০২৪
-review3_name	শাহিন আলম
-review3_text	পরিষ্কার-পরিচ্ছন্ন পরিবেশ, সময়মত সেবা।
-review3_rating	4.5
-review3_date	২০২৩
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title id="pageTitle">ডা. তারেকুল ইসলাম | আধুনিক সার্জারি বিশেষজ্ঞ</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0EA5E9',
+                        'primary-dark': '#0284C7',
+                        secondary: '#38BDF8',
+                        accent: '#F0F9FF',
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                        'display': ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <style>
+        * { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, .font-display { font-family: 'Outfit', sans-serif; }
+        html { scroll-behavior: smooth; }
+        
+        body {
+            background: linear-gradient(135deg, #FFFFFF 0%, #F8FAFC 100%);
+            overflow-x: hidden;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 1.5rem;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
+            transition: all 0.3s ease;
+            border: 1px solid #E2E8F0;
+        }
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 30px -12px rgba(14, 165, 233, 0.15);
+            border-color: rgba(14, 165, 233, 0.3);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(105deg, #0EA5E9 0%, #38BDF8 100%);
+            transition: all 0.3s;
+            box-shadow: 0 4px 12px rgba(14, 165, 233, 0.25);
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(14, 165, 233, 0.35);
+        }
+        
+        .sticky-nav {
+            backdrop-filter: blur(12px);
+            background: rgba(255, 255, 255, 0.92);
+            border-bottom: 1px solid #E2E8F0;
+        }
+        
+        .hero-pattern {
+            background-image: radial-gradient(circle at 20% 30%, rgba(14,165,233,0.04) 0%, transparent 60%);
+        }
+        
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #E2E8F0; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb { background: #0EA5E9; border-radius: 10px; }
+        
+        .loader {
+            border: 3px solid #E2E8F0;
+            border-top: 3px solid #0EA5E9;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        
+        input, select, textarea {
+            transition: all 0.2s;
+        }
+        input:focus, select:focus, textarea:focus {
+            border-color: #0EA5E9;
+            outline: none;
+            ring: 2px solid #0EA5E9;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="loadingOverlay" class="fixed inset-0 bg-white z-50 flex items-center justify-center">
+        <div class="text-center">
+            <div class="loader mx-auto mb-4"></div>
+            <p class="text-primary font-semibold">লোড হচ্ছে...</p>
+        </div>
+    </div>
+
+    <!-- নেভিগেশন -->
+    <nav class="sticky-nav fixed w-full z-50 top-0">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <i class="fas fa-stethoscope text-2xl text-primary"></i>
+                <span class="text-xl font-bold text-gray-800">ডা. তারেকুল ইসলাম<span class="text-primary"></span></span>
+            </div>
+            <div class="hidden md:flex gap-8 text-gray-600 font-medium">
+                <a href="#home" class="hover:text-primary transition">হোম</a>
+                <a href="#doctor" class="hover:text-primary transition">ডাক্তার</a>
+                <a href="#education-section" class="hover:text-primary transition">শিক্ষা</a>
+                <a href="#reviews" class="hover:text-primary transition">রিভিউ</a>
+                <a href="#contact-section" class="hover:text-primary transition">যোগাযোগ</a>
+                <a href="#map-section" class="hover:text-primary transition">লোকেশন</a>
+            </div>
+            <a href="#appointment" class="btn-primary text-white px-5 py-2 rounded-full text-sm font-medium hidden md:block">
+                অ্যাপয়েন্টমেন্ট
+            </a>
+            <button id="mobileMenuBtn" class="md:hidden text-2xl text-gray-700">
+                <i id="menuIcon" class="fas fa-bars"></i>
+            </button>
+        </div>
+        <div id="mobileMenu" class="hidden md:hidden bg-white/95 backdrop-blur-md px-6 py-4 border-t border-gray-100">
+            <div class="flex flex-col gap-3">
+                <a href="#home" class="hover:text-primary py-2">হোম</a>
+                <a href="#doctor" class="hover:text-primary py-2">ডাক্তার</a>
+                <a href="#education-section" class="hover:text-primary py-2">শিক্ষা</a>
+                <a href="#reviews" class="hover:text-primary py-2">রিভিউ</a>
+                <a href="#contact-section" class="hover:text-primary py-2">যোগাযোগ</a>
+                <a href="#map-section" class="hover:text-primary py-2">লোকেশন</a>
+                <a href="#appointment" class="btn-primary text-white px-4 py-2 rounded-full text-center">অ্যাপয়েন্টমেন্ট</a>
+            </div>
+        </div>
+    </nav>
+
+    <main id="mainContent" style="display: none;">
+        <!-- হিরো সেকশন -->
+        <section id="home" class="min-h-screen flex items-center pt-24 pb-16 hero-pattern">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div data-aos="fade-right">
+                        <div class="inline-block px-3 py-1 bg-primary/10 rounded-full text-primary text-sm font-medium mb-4">
+                            <i class="fas fa-heartbeat mr-1"></i> সার্জারী বিশেষজ্ঞ
+                        </div>
+                        <h1 class="text-4xl md:text-5xl font-bold text-gray-800 leading-tight mb-4">
+                            আপনার স্বাস্থ্যের প্রতি <span class="text-primary">সচেতন থাকুন</span>
+                        </h1>
+                        <p id="heroQuote" class="text-gray-500 text-lg leading-relaxed mb-6">
+                            একজন চিকিৎসক হিসেবে আমি প্রতিকূলতার মুখ দেখেছি। মৃত্যু, যন্ত্রণা, কষ্ট — অনেক কিছু দেখেছি। 
+                            আমি শুধু চাই আপনি সঠিক জীবনযাপন করুন, স্বাস্থ্যকর খাবার খান, ধৈর্য ধরুন। বিশ্বাস রাখুন, আপনার শরীর আপনাকে পুরস্কৃত করবে।
+                        </p>
+                        <a href="#appointment" class="btn-primary text-white px-8 py-3 rounded-full inline-flex items-center gap-2 font-medium">
+                            <i class="fas fa-calendar-check"></i> অ্যাপয়েন্টমেন্ট করুন
+                        </a>
+                    </div>
+                    <div data-aos="fade-left" class="flex justify-center">
+                        <div class="relative">
+                            <div class="absolute inset-0 bg-gradient-to-tr from-primary/20 to-secondary/20 rounded-full blur-2xl"></div>
+                            <img id="doctorImage" src="https://randomuser.me/api/portraits/men/45.jpg" alt="ডাক্তার" class="rounded-3xl shadow-xl w-80 md:w-96 h-auto object-cover border-4 border-white">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ডাক্তার প্রোফাইল ও শিক্ষা (একসাথে) -->
+        <section id="doctor" class="py-16 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-10">
+                    <!-- ডাক্তার কার্ড -->
+                    <div class="card p-6 md:p-8" data-aos="fade-right">
+                        <div class="flex items-center gap-4 mb-5">
+                            <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center">
+                                <i class="fas fa-user-md text-primary text-2xl"></i>
+                            </div>
+                            <div>
+                                <h2 id="doctorName" class="text-2xl font-bold text-gray-800">ডা. তারেকুল ইসলাম</h2>
+                                <p id="doctorSpecialty" class="text-primary font-medium">জেনারেল সার্জারি</p>
+                            </div>
+                        </div>
+                        <p id="doctorBio" class="text-gray-600 leading-relaxed mb-4">
+                            ডা. তারেকুল ইসলাম ২০১১ সালে রাজশাহী মেডিকেল কলেজ থেকে স্নাতক সম্পন্ন করেন। ইন্টার্নশিপ চলাকালীন তিনি সার্জারি বিভাগে বিশেষ আগ্রহী হন। 
+                            ২০১৪ সালে বাংলাদেশ কলেজ অব ফিজিশিয়ানস অ্যান্ড সার্জনস, ঢাকা থেকে সার্জারি বিশেষত্বের ফেলোশিপ পরীক্ষার প্রথম ও দ্বিতীয় অংশ সম্পন্ন করেন।
+                        </p>
+                        <div class="flex gap-3 mt-4">
+                            <span class="px-3 py-1 bg-gray-100 rounded-full text-sm text-gray-600"><i class="fas fa-certificate text-primary mr-1"></i> এমবিবিএস</span>
+                            <span class="px-3 py-1 bg-gray-100 rounded-full text-sm text-gray-600"><i class="fas fa-certificate text-primary mr-1"></i> এফসিপিএস</span>
+                        </div>
+                    </div>
+                    
+                    <!-- শিক্ষা ও গবেষণা (এখন id=education-section) -->
+                    <div id="education-section" class="card p-6 md:p-8 scroll-mt-20" data-aos="fade-left">
+                        <h3 class="text-xl font-bold text-gray-800 mb-5 flex items-center gap-2">
+                            <i class="fas fa-graduation-cap text-primary"></i> শিক্ষা ও গবেষণা
+                        </h3>
+                        <ul id="educationList" class="space-y-4"></ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- স্ট্যাটস -->
+        <section class="py-12 bg-accent/30">
+            <div class="container mx-auto px-6">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <div class="text-center" data-aos="zoom-in"><div class="text-3xl font-bold text-primary" id="statYears">১৫+</div><div class="text-gray-500 text-sm">বছর অভিজ্ঞতা</div></div>
+                    <div class="text-center" data-aos="zoom-in" data-aos-delay="100"><div class="text-3xl font-bold text-primary" id="statPatients">৫কে+</div><div class="text-gray-500 text-sm">সফল অপারেশন</div></div>
+                    <div class="text-center" data-aos="zoom-in" data-aos-delay="200"><div class="text-3xl font-bold text-primary" id="statSatisfaction">৯৭%</div><div class="text-gray-500 text-sm">সন্তুষ্ট রোগী</div></div>
+                    <div class="text-center" data-aos="zoom-in" data-aos-delay="300"><div class="text-3xl font-bold text-primary">২৪/৭</div><div class="text-gray-500 text-sm">সাপোর্ট</div></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- অ্যাপয়েন্টমেন্ট ফর্ম (বিশেষজ্ঞতা অপসারণ) -->
+        <section id="appointment" class="py-16">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-3">অ্যাপয়েন্টমেন্ট <span class="text-primary">বুক করুন</span></h2>
+                    <div class="w-20 h-1 bg-primary mx-auto rounded-full"></div>
+                </div>
+                <div class="grid md:grid-cols-2 gap-10">
+                    <!-- ফর্ম (বিশেষজ্ঞতা ড্রপডাউন বাদ) -->
+                    <div class="card p-6 md:p-8" data-aos="fade-right">
+                        <form id="appointmentForm" class="space-y-5">
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <input type="text" id="patientName" placeholder="আপনার নাম" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary">
+                                <input type="number" id="patientAge" placeholder="বয়স" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary">
+                            </div>
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <select id="patientGender" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary">
+                                    <option value="">লিঙ্গ</option>
+                                    <option>পুরুষ</option>
+                                    <option>মহিলা</option>
+                                    <option>অন্যান্য</option>
+                                </select>
+                                <!-- বিশেষজ্ঞতা ড্রপডাউন সরানো হয়েছে -->
+                                <div></div> <!-- খালি ঘর রাখলাম গ্রিড ঠিক রাখতে -->
+                            </div>
+                            <input type="tel" id="patientPhone" placeholder="হোয়াটসঅ্যাপ নম্বর" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary">
+                            <textarea id="patientProblem" rows="3" placeholder="আপনার সমস্যার সংক্ষিপ্ত বিবরণ" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary"></textarea>
+                            <button type="submit" class="btn-primary text-white px-6 py-3 rounded-xl font-semibold w-full flex items-center justify-center gap-2">
+                                <i class="fab fa-whatsapp text-lg"></i> হোয়াটসঅ্যাপে বুক করুন
+                            </button>
+                        </form>
+                        <div id="formMessage" class="hidden mt-4 p-3 rounded-xl text-center text-green-700 bg-green-50"></div>
+                    </div>
+                    
+                    <!-- যোগাযোগ তথ্য (এখন id=contact-section) -->
+                    <div id="contact-section" class="card p-6 md:p-8 scroll-mt-20" data-aos="fade-left">
+                        <h3 class="text-xl font-bold text-gray-800 mb-5">যোগাযোগ ও সময়সূচি</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-3"><i class="fab fa-whatsapp text-primary text-xl w-6"></i><p id="contactWhatsapp" class="text-gray-600">+৮৮০১৭১২৩৪৫৬৭৮</p></div>
+                            <div class="flex items-center gap-3"><i class="fas fa-phone-alt text-primary text-xl w-6"></i><p id="contactPhone" class="text-gray-600">+৮৮০১৭১২৩৪৫৬৭৮</p></div>
+                            <div class="flex items-center gap-3"><i class="fas fa-envelope text-primary text-xl w-6"></i><p id="contactEmail" class="text-gray-600">dr.tariqul@takecare.com</p></div>
+                            <div class="flex items-center gap-3"><i class="fas fa-map-marker-alt text-primary text-xl w-6"></i><p id="clinicAddress" class="text-gray-600">২৩/বি, প্যান্থপথ, ঢাকা-১২০৫</p></div>
+                            <div class="pt-3 border-t border-gray-100">
+                                <p class="font-semibold mb-2">চেম্বারের সময়:</p>
+                                <p id="clinicHours" class="text-gray-500 text-sm">সোম-শুক্র: সন্ধ্যা ৬টা - ৯টা<br>শনিবার: সকাল ১০টা - দুপুর ১টা</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- গুগল ম্যাপ সেকশন (নতুন যোগ) -->
+        <section id="map-section" class="py-16 bg-white scroll-mt-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-10" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-3">আমার <span class="text-primary">চেম্বার</span></h2>
+                    <div class="w-20 h-1 bg-primary mx-auto rounded-full"></div>
+                </div>
+                <div class="card overflow-hidden" data-aos="fade-up">
+                    <iframe id="googleMap" 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3652.324563562395!2d90.3926532748357!3d23.74718408925106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8bd552c2b3b%3A0x4e8f1c4e4f5c6d7e!2sDhaka%20Medical%20College%20Hospital!5e0!3m2!1sen!2sbd!4v1700000000000!5m2!1sen!2sbd" 
+                        width="100%" height="380" style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
+                    <div class="p-5 bg-white border-t border-gray-100 flex items-center gap-3">
+                        <i class="fas fa-location-dot text-primary text-xl"></i>
+                        <p id="mapAddress" class="text-gray-600">২৩/বি, প্যান্থপথ, ঢাকা-১২০৫</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- রিভিউ -->
+        <section id="reviews" class="py-16 bg-gray-50/50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-3">রোগীর <span class="text-primary">মতামত</span></h2>
+                    <div class="w-20 h-1 bg-primary mx-auto rounded-full"></div>
+                </div>
+                <div id="reviewsGrid" class="grid md:grid-cols-3 gap-8"></div>
+            </div>
+        </section>
+
+        <!-- নিউজলেটার -->
+        <section class="py-16 bg-primary/5">
+            <div class="container mx-auto px-6 text-center">
+                <div class="max-w-2xl mx-auto" data-aos="fade-up">
+                    <i class="fas fa-bell text-primary text-4xl mb-4"></i>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2">কোনও আপডেট মিস করবেন না</h3>
+                    <p class="text-gray-500 mb-6">আমরা নতুন পণ্য বা প্রোমোশনের ইমেইল পাঠাই না। আপডেট পেতে সোশ্যাল মিডিয়ায় ফলো করতে পারেন।</p>
+                    <a href="#contact-section" class="btn-primary text-white px-8 py-3 rounded-full inline-flex items-center gap-2">শুরু করুন <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <footer class="bg-white border-t border-gray-100 py-8">
+            <div class="container mx-auto px-6 text-center">
+                <div class="flex justify-center gap-5 mb-4">
+                    <a href="#" class="w-9 h-9 bg-gray-100 rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="w-9 h-9 bg-gray-100 rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-white transition"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="w-9 h-9 bg-gray-100 rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                </div>
+                <p id="footerText" class="text-gray-400 text-sm">© ২০২৫ TakeCare™ - সর্বস্বত্ব সংরক্ষিত</p>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        // ========== কনফিগারেশন ==========
+        const DOCTOR_WHATSAPP = "8801712345678";  // আপনার হোয়াটসঅ্যাপ নম্বর দিন (কান্ট্রি কোড ছাড়া 880 দিয়ে)
+        const GOOGLE_SHEETS_URL = "";  // আপনার গুগল শীট CSV লিংক দিন (ঐচ্ছিক)
+
+        // ডিফল্ট ডেটা (বাংলায়)
+        const DEFAULT_DATA = {
+            doctorName: "ডা. তারেকুল ইসলাম",
+            doctorSpecialty: "জেনারেল সার্জারি",
+            doctorBio: "ডা. তারেকুল ইসলাম ২০১১ সালে রাজশাহী মেডিকেল কলেজ থেকে স্নাতক সম্পন্ন করেন। ইন্টার্নশিপ চলাকালীন তিনি সার্জারি বিভাগে বিশেষ আগ্রহী হন। ২০১৪ সালে বাংলাদেশ কলেজ অব ফিজিশিয়ানস অ্যান্ড সার্জনস, ঢাকা থেকে সার্জারি বিশেষত্বের ফেলোশিপ পরীক্ষার প্রথম ও দ্বিতীয় অংশ সম্পন্ন করেন।",
+            doctorImage: "https://randomuser.me/api/portraits/men/45.jpg",
+            heroQuote: "একজন চিকিৎসক হিসেবে আমি প্রতিকূলতার মুখ দেখেছি। মৃত্যু, যন্ত্রণা, কষ্ট — অনেক কিছু দেখেছি। আমি শুধু চাই আপনি সঠিক জীবনযাপন করুন, স্বাস্থ্যকর খাবার খান, ধৈর্য ধরুন। বিশ্বাস রাখুন, আপনার শরীর আপনাকে পুরস্কৃত করবে।",
+            statYears: "১৫+",
+            statPatients: "৫কে+",
+            statSatisfaction: "৯৭%",
+            clinicAddress: "২৩/বি, প্যান্থপথ, ঢাকা-১২০৫",
+            phone: "+৮৮০১৭১২৩৪৫৬৭৮",
+            whatsapp: "+৮৮০১৭১২৩৪৫৬৭৮",
+            email: "dr.tariqul@takecare.com",
+            clinicHours: "সোম-শুক্র: সন্ধ্যা ৬টা - ৯টা<br>শনিবার: সকাল ১০টা - দুপুর ১টা",
+            footer: "© ২০২৫ TakeCare™ - সর্বস্বত্ব সংরক্ষিত",
+            mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3652.324563562395!2d90.3926532748357!3d23.74718408925106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8bd552c2b3b%3A0x4e8f1c4e4f5c6d7e!2sDhaka%20Medical%20College%20Hospital!5e0!3m2!1sen!2sbd!4v1700000000000!5m2!1sen!2sbd",
+            education: [
+                "কলেজ অব ফিজিশিয়ানস অ্যান্ড সার্জনসের ফেলো (প্রথম পর্ব)",
+                "অ্যানেস্থেসিয়া ও ব্যথা ব্যবস্থাপনায় প্রশিক্ষণ",
+                "জেনারেল সার্জারিতে প্রশিক্ষণ"
+            ],
+            reviews: [
+                { name: "রাকিব হোসেন", text: "দক্ষ ও পেশাদার ডাক্তার। অত্যন্ত যত্নশীল।", rating: 5, date: "২০২৪" },
+                { name: "ফাতেমা বেগম", text: "আমার বাবার সফল চিকিৎসা করেছেন। স্যারকে অসংখ্য ধন্যবাদ।", rating: 5, date: "২০২৪" },
+                { name: "শাহিন আলম", text: "পরিষ্কার-পরিচ্ছন্ন পরিবেশ, সময়মত সেবা।", rating: 4.5, date: "২০২৩" }
+            ]
+        };
+
+        // CSV পার্সার
+        function parseCSV(csvText) {
+            const rows = [];
+            const lines = csvText.split('\n');
+            for(let line of lines) {
+                line = line.trim();
+                if(line) {
+                    const values = [];
+                    let current = '', inQuotes = false;
+                    for(let ch of line) {
+                        if(ch === '"') inQuotes = !inQuotes;
+                        else if(ch === ',' && !inQuotes) { values.push(current.trim()); current = ''; }
+                        else current += ch;
+                    }
+                    values.push(current.trim());
+                    rows.push(values);
+                }
+            }
+            return rows;
+        }
+
+        async function loadFromSheets() {
+            if(!GOOGLE_SHEETS_URL) return DEFAULT_DATA;
+            try {
+                const resp = await fetch(GOOGLE_SHEETS_URL);
+                const csv = await resp.text();
+                const data = parseCSV(csv);
+                const sheet = {};
+                for(let row of data) if(row[0] && row[1]) sheet[row[0].toLowerCase()] = row[1];
+                
+                let fullName = sheet['firstname'] && sheet['lastname'] ? `${sheet['firstname']} ${sheet['lastname']}` : (sheet['doctorname'] || DEFAULT_DATA.doctorName);
+                return {
+                    doctorName: fullName,
+                    doctorSpecialty: sheet['specialty'] || DEFAULT_DATA.doctorSpecialty,
+                    doctorBio: sheet['bio'] || DEFAULT_DATA.doctorBio,
+                    doctorImage: sheet['image'] || DEFAULT_DATA.doctorImage,
+                    heroQuote: sheet['heroquote'] || DEFAULT_DATA.heroQuote,
+                    statYears: sheet['statyears'] || DEFAULT_DATA.statYears,
+                    statPatients: sheet['statpatients'] || DEFAULT_DATA.statPatients,
+                    statSatisfaction: sheet['statsatisfaction'] || DEFAULT_DATA.statSatisfaction,
+                    clinicAddress: sheet['clinicaddress'] || DEFAULT_DATA.clinicAddress,
+                    phone: sheet['phone'] || DEFAULT_DATA.phone,
+                    whatsapp: sheet['whatsapp'] || DEFAULT_DATA.whatsapp,
+                    email: sheet['email'] || DEFAULT_DATA.email,
+                    clinicHours: sheet['clinichours'] || DEFAULT_DATA.clinicHours,
+                    footer: sheet['footer'] || DEFAULT_DATA.footer,
+                    mapUrl: sheet['mapurl'] || DEFAULT_DATA.mapUrl,
+                    education: [
+                        sheet['education1'] || DEFAULT_DATA.education[0],
+                        sheet['education2'] || DEFAULT_DATA.education[1],
+                        sheet['education3'] || DEFAULT_DATA.education[2]
+                    ],
+                    reviews: [
+                        { name: sheet['review1_name'] || DEFAULT_DATA.reviews[0].name, text: sheet['review1_text'] || DEFAULT_DATA.reviews[0].text, rating: parseFloat(sheet['review1_rating'] || DEFAULT_DATA.reviews[0].rating), date: sheet['review1_date'] || DEFAULT_DATA.reviews[0].date },
+                        { name: sheet['review2_name'] || DEFAULT_DATA.reviews[1].name, text: sheet['review2_text'] || DEFAULT_DATA.reviews[1].text, rating: parseFloat(sheet['review2_rating'] || DEFAULT_DATA.reviews[1].rating), date: sheet['review2_date'] || DEFAULT_DATA.reviews[1].date },
+                        { name: sheet['review3_name'] || DEFAULT_DATA.reviews[2].name, text: sheet['review3_text'] || DEFAULT_DATA.reviews[2].text, rating: parseFloat(sheet['review3_rating'] || DEFAULT_DATA.reviews[2].rating), date: sheet['review3_date'] || DEFAULT_DATA.reviews[2].date }
+                    ]
+                };
+            } catch(e) { console.error(e); return DEFAULT_DATA; }
+        }
+
+        function updateUI(data) {
+            document.title = `${data.doctorName} | আধুনিক সার্জারি বিশেষজ্ঞ`;
+            document.getElementById('doctorName').innerText = data.doctorName;
+            document.getElementById('doctorSpecialty').innerText = data.doctorSpecialty;
+            document.getElementById('doctorBio').innerText = data.doctorBio;
+            document.getElementById('doctorImage').src = data.doctorImage;
+            document.getElementById('heroQuote').innerText = data.heroQuote;
+            document.getElementById('statYears').innerText = data.statYears;
+            document.getElementById('statPatients').innerText = data.statPatients;
+            document.getElementById('statSatisfaction').innerText = data.statSatisfaction;
+            document.getElementById('clinicAddress').innerText = data.clinicAddress;
+            document.getElementById('contactPhone').innerText = data.phone;
+            document.getElementById('contactWhatsapp').innerText = data.whatsapp;
+            document.getElementById('contactEmail').innerText = data.email;
+            document.getElementById('clinicHours').innerHTML = data.clinicHours;
+            document.getElementById('footerText').innerHTML = data.footer;
+            document.getElementById('mapAddress').innerText = data.clinicAddress;
+            if(data.mapUrl) document.getElementById('googleMap').src = data.mapUrl;
+            
+            const eduList = document.getElementById('educationList');
+            eduList.innerHTML = data.education.map(e => `<li class="flex items-start gap-3"><i class="fas fa-check-circle text-primary mt-1"></i><span class="text-gray-700">${e}</span></li>`).join('');
+            
+            const reviewsGrid = document.getElementById('reviewsGrid');
+            reviewsGrid.innerHTML = data.reviews.map((r,i) => `
+                <div class="card p-5" data-aos="fade-up" data-aos-delay="${i*100}">
+                    <div class="flex gap-1 text-yellow-400 mb-3">${Array(Math.floor(r.rating)).fill('<i class="fas fa-star"></i>').join('')}${r.rating%1 ? '<i class="fas fa-star-half-alt"></i>' : ''}${Array(5-Math.ceil(r.rating)).fill('<i class="far fa-star"></i>').join('')}</div>
+                    <p class="text-gray-600 mb-3">“${r.text}”</p>
+                    <div class="flex items-center gap-2"><i class="fas fa-user-circle text-primary text-2xl"></i><div><strong>${r.name}</strong><p class="text-gray-400 text-xs">${r.date}</p></div></div>
+                </div>
+            `).join('');
+            AOS.refresh();
+        }
+
+        function initWhatsApp() {
+            const form = document.getElementById('appointmentForm');
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const name = document.getElementById('patientName').value.trim();
+                const age = document.getElementById('patientAge').value.trim();
+                const gender = document.getElementById('patientGender').value;
+                const phone = document.getElementById('patientPhone').value.trim();
+                const problem = document.getElementById('patientProblem').value.trim();
+                
+                if(!name || !age || !gender || !phone) {
+                    alert('দয়া করে সব তথ্য পূরণ করুন');
+                    return;
+                }
+                
+                const msg = `🆕 *নতুন অ্যাপয়েন্টমেন্ট*%0A👤 নাম: ${name}%0A🎂 বয়স: ${age}%0A⚥ লিঙ্গ: ${gender}%0A📞 ফোন: ${phone}%0A📝 সমস্যা: ${problem || 'উল্লেখ নেই'}`;
+                window.open(`https://wa.me/${DOCTOR_WHATSAPP}?text=${msg}`, '_blank');
+                const msgDiv = document.getElementById('formMessage');
+                msgDiv.innerHTML = '✅ আপনার অ্যাপয়েন্টমেন্টের অনুরোধ পাঠানো হয়েছে! আমরা শীঘ্রই যোগাযোগ করব।';
+                msgDiv.classList.remove('hidden');
+                form.reset();
+                setTimeout(() => msgDiv.classList.add('hidden'), 5000);
+            });
+        }
+
+        function initMobileMenu() {
+            const btn = document.getElementById('mobileMenuBtn');
+            const menu = document.getElementById('mobileMenu');
+            const icon = document.getElementById('menuIcon');
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+                icon.classList.toggle('fa-bars');
+                icon.classList.toggle('fa-times');
+            });
+            menu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => { menu.classList.add('hidden'); icon.classList.add('fa-bars'); icon.classList.remove('fa-times'); }));
+        }
+
+        async function init() {
+            const data = await loadFromSheets();
+            updateUI(data);
+            document.getElementById('loadingOverlay').style.display = 'none';
+            document.getElementById('mainContent').style.display = 'block';
+            AOS.init({ duration: 600, once: true, offset: 80 });
+            initMobileMenu();
+            initWhatsApp();
+        }
+        init();
+    </script>
+</body>
+</html>
